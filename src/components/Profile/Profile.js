@@ -1,5 +1,5 @@
 import React from "react"
-// import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 import s from "./Profile.module.css"
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
@@ -11,22 +11,22 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
 				<div className={s.description}>
 					<img src={avatar} alt={name} width="300" className="avatar" />
 					<p className={s.name}>{name}</p>
-					<p className="tag">{tag}</p>
-					<p className="location">{location}</p>
+					<p className={s.tag}>{tag}</p>
+					<p className={s.location}>{location}</p>
 				</div>
 
-				<ul className="stats">
+				<ul className={s.stats}>
 					<li>
-						<span className="label">Followers </span>
-						<span className="quantity">{followers}</span>
+						<span className={s.label}>Followers </span>
+						<span className={s.quantity}>{followers}</span>
 					</li>
 					<li>
-						<span className="label">Views </span>
-						<span className="quantity">{views}</span>
+						<span className={s.label}>Views </span>
+						<span className={s.quantity}>{views}</span>
 					</li>
 					<li>
-						<span className="label">Likes </span>
-						<span className="quantity">{likes}</span>
+						<span className={s.label}>Likes </span>
+						<span className={s.quantity}>{likes}</span>
 					</li>
 				</ul>
 			</div>
@@ -35,12 +35,14 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
 }
 export default Profile
 
-// Profile.propTypes = {
-// 	name:
-// 	tag:
-// 	location:
-// 	avatar:
-// 	stats: PropTypes.shape(
-// 		followers: PropTypes.number.isRequired
-// 	)
-// }
+Profile.propTypes = {
+	name: PropTypes.string.isRequired,
+	tag: PropTypes.string.isRequired,
+	location: PropTypes.string.isRequired,
+	avatar: PropTypes.string.isRequired,
+	stats: PropTypes.shape({
+		followers: PropTypes.number.isRequired,
+		views: PropTypes.number.isRequired,
+		likes: PropTypes.number.isRequired,
+	}),
+}
