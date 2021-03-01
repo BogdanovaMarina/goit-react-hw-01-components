@@ -1,28 +1,31 @@
 .transactionHistory {
   width: 600px;
 
-  border-spacing: 2px;
+  border-spacing: 1px;
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 th {
   padding: 15px;
 }
 
-table thead tr {
+.headTable {
   color: #ecf1f4;
   font-weight: bold;
   background: rgb(0, 188, 213);
-}
-table thead tr td {
   border: 1px solid rgb(0, 188, 213);
 }
-table tbody tr td {
+
+.listItem td {
   padding: 10px;
   border: 1px solid #e8e9eb;
 }
-table tbody tr:nth-child(2n) {
+.listItem:nth-child(2n) {
   background: #f4f4f4;
 }
-table tbody tr:hover {
+.listItem:hover {
   background: #ebffe8;
 }

@@ -7,7 +7,7 @@ const TransactionHistory = ({ items }) => {
     <>
       <table className={s.transactionHistory}>
         <thead>
-          <tr>
+          <tr className={s.headTable}>
             <th>Type</th>
             <th>Amount</th>
             <th>Currency</th>
@@ -18,7 +18,7 @@ const TransactionHistory = ({ items }) => {
           {items.map(el => {
             const { id, type, amount, currency } = el;
             return (
-              <tr key={id}>
+              <tr className={s.listItem} key={id}>
                 <td>{type}</td>
                 <td>{amount}</td>
                 <td>{currency}</td>
