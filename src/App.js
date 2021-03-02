@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import './index.css';
 import Container from './components/Container/Container';
 import Profile from './components/Profile/Profile';
